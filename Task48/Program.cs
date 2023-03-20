@@ -1,17 +1,17 @@
-﻿// задайте двумерный массив размером MxN,
-// заполненый случайными числами m = 3, n = 4
+﻿// задайте двумерный массив размера m на n,
+// каждый элемент в массиве назодится по формуле Amn = m+n. 
+// Выведите полученный массив
 
 
-int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+int[,] CreateMatrixSumIndex (int rows, int columns )
 {
     int[,] matrix = new int[rows, columns];
-    Random rnd = new Random();
     
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix [i, j] = rnd.Next(min, max + 1);
+            matrix [i, j] = i + j;
         }
     }
     return matrix;
@@ -28,6 +28,5 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
-
-int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
+int[,] array2D = CreateMatrixSumIndex(3, 4);
 PrintMatrix(array2D);
