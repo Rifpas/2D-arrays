@@ -50,3 +50,4 @@ PrintMatrix(array2D);
 Console.WriteLine(" ");
 int sumelements = SumElementsDiag(array2D);
 Console.WriteLine($"{sumelements}");
+

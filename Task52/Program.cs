@@ -50,7 +50,7 @@ for (int j = 0; j < matrix.GetLength(1); j++)
         
     // mean = sum / matrix.GetLength(1);
        
-    }
+    }dot
     return Math.Round(mean, 1);
 }   
 
